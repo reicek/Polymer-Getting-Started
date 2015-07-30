@@ -1,4 +1,4 @@
-![](https://cloud.githubusercontent.com/assets/110953/7877439/6a69d03e-0590-11e5-9fac-c614246606de.png) 
+![](https://platzi.com/blog/wp-content/uploads/2015/07/blog_polymer.jpg) 
 # Polymer Google Web Components on Polymer Starter Kit demo
 ###### by César Antón Dorantes <a href="https://twitter.com/reicek" target="_blank">@reicek</a>
 
