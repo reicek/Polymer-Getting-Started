@@ -1,6 +1,6 @@
 {
-  "name": "polymer-starter-kit",
-  "version": "0.0.0",
+  "name": "Polymer-Getting-Started",
+  "version": "1.0.1",
   "license": "http://polymer.github.io/LICENSE.txt",
   "dependencies": {
     "iron-elements": "PolymerElements/iron-elements#1.0.0",
@@ -10,7 +10,9 @@
     "page": "visionmedia/page.js#~1.6.3",
     "google-map": "GoogleWebComponents/google-map#~1.0.3",
     "google-youtube": "GoogleWebComponents/google-youtube#~1.1.2",
-    "google-hangout-button": "GoogleWebComponents/google-hangout-button#~1.0.1"
+    "google-hangout-button": "GoogleWebComponents/google-hangout-button#~1.0.1",
+    "paper-input": "PolymerElements/paper-input#~1.0.7",
+    "firebase-element": "GoogleWebComponents/firebase-element#~1.0.3"
   },
   "devDependencies": {
     "web-component-tester": "*",

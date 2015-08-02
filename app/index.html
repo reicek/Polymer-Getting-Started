@@ -57,15 +57,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <body unresolved class="fullbleed layout vertical">
 	<template is="dom-bind" id="app">
-
 		<paper-drawer-panel id="paperDrawerPanel" forceNarrow>
 		  <div drawer>
-
 			<!-- Drawer Toolbar -->
 			<paper-toolbar id="drawerToolbar">
 			  <span>Menú</span>
 			</paper-toolbar>
-
 			<!-- Drawer Content -->
 			  <paper-menu 
 			   class             = "list" 
@@ -94,20 +91,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 				<iron-icon icon="menu" paper-drawer-toggle></iron-icon>
 			  </button>
 			  <span class="flex"></span>
-
 			  <!-- Toolbar icons -->
 
 			  <!-- Application name -->
 			  <div class="appname bottom paper-font-display2">Google Polymer Web Components sampler</div>
-
 			</paper-toolbar>
-
 			<!-- Main Content -->
 			  <iron-pages attr-for-selected="data-route" selected="{{route}}">
-
+				<firebase-document
+				 location="https://platzi-realtimelist.firebaseio.com/globalMessage"
+				 data="{{globalMessage}}">
+				</firebase-document>
 				<section data-route="home">
 					<paper-material elevation="1">
-						<p>Selecciona un elemento para mostrar:</p>
+						<paper-input-container>
+							<label>¿Como te llamas?</label>
+							<input 
+							 is="iron-input" 
+							 bind-value ="{{nombre}}" 
+							 autofocus>
+							</input>
+						</paper-input-container>
+						<paper-input-container>
+							<label>¿Cual es tu apellido?</label>
+							<input 
+							 is         = "iron-input" 
+							 bind-value = "{{apellido}}">
+							</input>
+						</paper-input-container>
+					</paper-material>
+					<paper-material elevation="1">
+						<paper-input-container>
+							<label>Mensaje en tiempo real</label>
+							<input 
+							 is         = "iron-input" 
+							 bind-value = "{{globalMessage.content}}">
+							</input>
+						</paper-input-container>
+						<h2>{{globalMessage.content}}</h2>
+					</paper-material>
+					<paper-material elevation="1">
+						<p>¡ Hola <span>{{nombre}}</span> <span>{{apellido}}</span> !, selecciona un elemento para mostrar:</p>
 						<ul>
 							<li>
 								<a href="/maps">
@@ -127,7 +151,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 						</ul>
 					</paper-material>
 				</section>
-
 				<section data-route="maps">
 					<paper-material elevation="1">
 						<h2 class="paper-font-display2">Google Maps</h2>
@@ -139,14 +162,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 						<p><a href="https://elements.polymer-project.org/elements/google-map">https://elements.polymer-project.org/elements/google-map</a></p>
 						<h3>Ejemplo:</h3>
 						<google-map 
-							apiKey="AIzaSyBuI0G3qWHr0JoYg-UhCggr9SaKFynAv_E"
-							latitude="37.77493" 
-							longitude="-122.41942"
-							style="height:300px">
+					     apiKey    = "AIzaSyBuI0G3qWHr0JoYg-UhCggr9SaKFynAv_E"
+						 latitude  = "37.77493" 
+						 longitude = "-122.41942"
+						 style     = "height:300px">
 						</google-map>
 					</paper-material>
 				</section>
-
 				<section data-route="youtube">
 					<paper-material elevation="1">
 						<h2 class="paper-font-display2">Youtube</h2>
@@ -158,14 +180,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 						<p><a href="https://elements.polymer-project.org/elements/google-youtube">https://elements.polymer-project.org/elements/google-youtube</a></p>
 						<h3>Ejemplo:</h3>
 						<google-youtube
-							video-id="HpxqDgcHSNY"
-							height="400px"
-							width="100%"
-							autoplay="0">
+						 video-id = "HpxqDgcHSNY"
+						 height   = "400px"
+						 width    = "100%"
+						 autoplay = "0">
 						</google-youtube>
 					</paper-material>
 				</section>
-
 				<section data-route="hangouts">
 					<paper-material elevation="1">
 						<h2 class="paper-font-display2">Google Hangouts</h2>
@@ -178,35 +199,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 						<h3>Ejemplos:</h3>
 						<google-hangout-button></google-hangout-button>
 						<google-hangout-button 
-							type="onair" 
-							width="175">
+						 type  = "onair" 
+						 width = "175">
 						</google-hangout-button>
 					</paper-material>
 				</section>
-
 			  </iron-pages>
 			  </paper-header-panel>
 		</paper-drawer-panel>
-
-		<paper-toast id="caching-complete"
-					 duration="6000"
-					 text="Caching complete! This app will work offline.">
+		<paper-toast 
+		 id       = "caching-complete"
+		 duration = "6000"
+		 text     = "Caching complete! This app will work offline.">
 		</paper-toast>
-
-		<platinum-sw-register auto-register
-							  clients-claim
-							  skip-waiting
-							  on-service-worker-installed="displayInstalledToast">
-		  <platinum-sw-cache default-cache-strategy="networkFirst"
-							 precache-file="precache.json">
-		  </platinum-sw-cache>
+		<platinum-sw-register 
+		 auto-register
+		 clients-claim
+		 skip-waiting
+		 on-service-worker-installed = "displayInstalledToast">
+			<platinum-sw-cache 
+			 default-cache-strategy = "networkFirst"
+			 precache-file          = "precache.json">
+			</platinum-sw-cache>
 		</platinum-sw-register>
-
 	</template>
-
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
 </body>
-
 </html>
