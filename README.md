@@ -6,15 +6,6 @@
 
 <a href="https://platzi.com/blog/polymer-google-web-components/" target="_blank">Tutorial</a>
 
-### Included out of the box:
-
-* [Polymer](http://polymer-project.org), Paper and Iron elements
-* [Material Design](http://www.google.com/design/spec/material-design/introduction.html) layout 
-* Routing with [Page.js](https://visionmedia.github.io/page.js/)
-* Unit testing with Web Component Tester
-* Offline-first setup through Service Worker elements
-* End-to-end Build Tooling (including [Vulcanize](https://github.com/Polymer/vulcanize))
-
 ## Getting Started
 
 To take advantage of Polymer Starter Kit you need to:
