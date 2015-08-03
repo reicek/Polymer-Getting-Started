@@ -1,8 +1,8 @@
 ![](https://platzi.com/blog/wp-content/uploads/2015/07/blog_polymer.jpg) 
-# Polymer Google Web Components on Polymer Starter Kit demo
+# Gettings Started with Polymer Starter Kit
 ###### by César Antón Dorantes <a href="https://twitter.com/reicek" target="_blank">@reicek</a>
 
-> Application to demonstrate how to configure some Polymer Google Web Components in the Polymer Starter Kit
+> Application to demonstrate how to configure the Polymer Starter Kit
 
 <a href="https://platzi.com/blog/polymer-google-web-components/" target="_blank">Tutorial</a>
 
